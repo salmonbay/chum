@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div.loginbox
+    form(name='lucky', action='/lucky', method='POST')
+      div.input
+        span.label First Name
+        input(type='text', name='first_name')
+      div.input
+        span.label Email Address
+        input(type='text', name='email')
+      div.actions
+        input(type='submit', name='Sumbit', value='Lucky')
